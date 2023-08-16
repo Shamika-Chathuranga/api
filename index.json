@@ -1,0 +1,142 @@
+[
+    {
+        "channel": "002RadioTV.do",
+        "url": "https://cdn.002radio.com:3909/live/radio002live.m3u8",
+        "http_referrer": null,
+        "user_agent": null
+    },
+    {
+        "channel": "1001Noites.br",
+        "url": "https://cdn.jmvstream.com/w/LVW-8155/ngrp:LVW8155_41E1ciuCvO_all/playlist.m3u8",
+        "http_referrer": null,
+        "user_agent": null
+    },
+    {
+        "channel": "100AutoMotoTV.bg",
+        "url": "http://100automoto.tv:1935/bgtv1/autotv/playlist.m3u8",
+        "http_referrer": null,
+        "user_agent": null
+    },
+    {
+        "channel": "100News.ua",
+        "url": "http://85.238.112.40:8810/hls_sec/239.33.16.32-.m3u8",
+        "http_referrer": null,
+        "user_agent": null
+    },
+    {
+        "channel": "101TeleAntequera.es",
+        "url": "https://limited38.todostreaming.es/live/101tv-AntequeraHD.m3u8",
+        "http_referrer": null,
+        "user_agent": null
+    },
+    {
+        "channel": "101tvMalaga.es",
+        "url": "https://limited38.todostreaming.es/live/101tv-web101tv.m3u8",
+        "http_referrer": null,
+        "user_agent": null
+    },
+    {
+        "channel": "10Channel.gr",
+        "url": "https://tv.mediacp.eu:8081/10channel/index.m3u8",
+        "http_referrer": null,
+        "user_agent": null
+    },
+    {
+        "channel": "10TV.in",
+        "url": "https://ythls.onrender.com/channel/UCfymZbh17_3T_UhgjkQ9fRQ.m3u8",
+        "http_referrer": null,
+        "user_agent": null
+    },
+    {
+        "channel": "111TV.it",
+        "url": "https://5db313b643fd8.streamlock.net/111TV/111TV/playlist.m3u8",
+        "http_referrer": null,
+        "user_agent": null
+    },
+    {
+        "channel": "11Kanal.ua",
+        "url": "https://ythls.onrender.com/channel/UCwALNfmBX8f2XKt2xe4PMBA.m3u8",
+        "http_referrer": null,
+        "user_agent": null
+    },
+    {
+        "channel": "11Kanal.ua",
+        "url": "https://11tv-dp.cdn-04.cosmonova.net.ua/hls/11tv-dp_ua_hi/index.m3u8",
+        "http_referrer": null,
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:97.0) Gecko/20100101 Firefox/97.0"
+    },
+    {
+        "channel": "123tv.de",
+        "url": "https://123tv-mx1.flex-cdn.net/index.m3u8",
+        "http_referrer": null,
+        "user_agent": null
+    },
+    {
+        "channel": "12ArabiaTV.iq",
+        "url": "https://livestream.almanasa.tv:8029/news/ch19/ch19_1080.m3u8",
+        "http_referrer": null,
+        "user_agent": null
+    },
+    {
+        "channel": "12TVParma.it",
+        "url": "https://5929b138b139d.streamlock.net/12TVParma/livestream/playlist.m3u8",
+        "http_referrer": null,
+        "user_agent": null
+    },
+    {
+        "channel": "12tv.es",
+        "url": "https://cloud.streamingconnect.tv/hls/12tv/gcmin.m3u8",
+        "http_referrer": null,
+        "user_agent": null
+    },
+    {
+        "channel": "13C.cl",
+        "url": "https://origin.dpsgo.com/ssai/event/GI-9cp_bT8KcerLpZwkuhw/master.m3u8",
+        "http_referrer": null,
+        "user_agent": null
+    },
+    {
+        "channel": "13E.cl",
+        "url": "https://origin.dpsgo.com/ssai/event/BBp0VeP6QtOOlH8nu3bWTg/master.m3u8",
+        "http_referrer": null,
+        "user_agent": null
+    },
+    {
+        "channel": "13MaxTelevision.ar",
+        "url": "http://coninfo.net:1935/13maxhd/live13maxtvnuevo/playlist.m3u8",
+        "http_referrer": null,
+        "user_agent": null
+    },
+    {
+        "channel": "13MaxTelevision.ar",
+        "url": "http://coninfo.net:1935/13maxhd/live13maxtvnuevo_720p/playlist.m3u8",
+        "http_referrer": null,
+        "user_agent": null
+    },
+    {
+        "channel": "13P.cl",
+        "url": "https://origin.dpsgo.com/ssai/event/p4mmBxEzSmKAxY1GusOHrw/master.m3u8",
+        "http_referrer": null,
+        "user_agent": null
+    },
+    {
+        "channel": "13SiamThai.th",
+        "url": "https://live.x2.co.th/live/c363cb4eccf08f34c6c9b25ab42ceb0249f51e56c2863a4217c7641ca2aae6a8ccc6f31dc6bca51fd26b59f9c4b9911eba8c88cbeb43ecb0eb6b6892f529b3cec0b5dc5199cb970f7f1b1148c19e4e8c89ab58eb53846c812a2d4d14ed670c36c677631001ed986a2130e4c4325fab56.m3u8",
+        "http_referrer": null,
+        "user_agent": null
+    },
+    {
+        "channel": "13SiamThai.th",
+        "url": "http://iptvh.it/13siamthai.m3u8",
+        "http_referrer": null,
+        "user_agent": null
+    },
+    {
+        "channel": "13T.cl",
+        "url": "https://origin.dpsgo.com/ssai/event/f4TrySe8SoiGF8Lu3EIq1g/master.m3u8",
+        "http_referrer": null,
+        "user_agent": null
+    }
+    
+    ]
+  
