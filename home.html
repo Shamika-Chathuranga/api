@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>API DATA</title>
+</head>
+<body>
+<div id="container">
+    <br><br>
+    
+    <center><h1>All User Data</h1></center><br><br>
+    <button id="showdata" class="btn btn-primary bg-danger">Load User Data</button>&nbsp;&nbsp;&nbsp;<button id="insertData" class="btn btn-primary bg-success" onclick="unHide()">Insert User Data</button>&nbsp;&nbsp;&nbsp;<button id="deleteData" onclick="deleteUnhide()" class="btn btn-primary bg-warning">Delete User Data</button><br><br>
+<div id="allData">
+    <div class="row" id="allList">
+        <div id="cards-container">
+            <!-- cards will be put here by pagination.js -->
+          </div>
+          <div id="pagination-container">
+            <!-- the pagination controls will be put here by pagination.js -->
+          </div>
+       
+    </div>
+</div>
+
+    <div id="insert" class="insert">
+    <h2>Insert User Data</h2>
+    <form id="myForm" enctype="multipart/form-data">
+        <div class="mb-3">
+            <label for="name" class="form-label">Title <span class="text-danger">*</span></label>
+            <input type="text" name="name" id="title" class="form-control" placeholder="Enter Title" />
+        </div>
+        <div class="mb-3">
+            <label for="email" class="form-label">Body <span class="text-danger">*</span></label>
+            <input type="email" name="email" id="email" class="form-control"
+                placeholder="Enter body Message" />
+        </div>
+      
+        <button id="InsertDa" type="button" onclick="insertData()" class="btn btn-primary mb-3 bg-success">Insert Data</button>
+    </form>
+    </div>
+
+    <div id="delete" class="delete">
+      <h2>Delete User Data</h2>
+     
+          <div class="mb-3">
+              <label for="name" class="form-label">ID <span class="text-danger">*</span></label>
+              <input type="text" placeholder="Enter id To Delete Data" id="id1" class="form-control">
+          </div>
+       
+          <button id="delDa" type="button" onclick="deleteData()" class="btn btn-primary mb-3 bg-warning">Delete Data</button>
+      </div>
+  
+
+    <nav aria-label="..." class="nav">
+        <ul class="pagination">
+          <li class="page-item disabled">
+            <a class="page-link" href="#" tabindex="-1">Previous</a>
+          </li>
+          <li class="page-item"><a class="page-link" href="#">1</a></li>
+          <li class="page-item active">
+            <a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item">
+            <a class="page-link" href="#">Next</a>
+          </li>
+        </ul>
+      </nav>
+
+</div>
+
+
+
+
+<script src="script.js"></script>  
+</body>
+</html>

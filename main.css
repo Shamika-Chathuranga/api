@@ -1,0 +1,27 @@
+body{
+    padding: 12px;
+    margin: 0px;
+}
+#container{
+    width: 100%;
+    
+   
+}
+body{
+    background-image: url('R.jpeg');
+}
+#container.h1{
+    padding: 0px;
+    margin: 0px;
+
+}
+.insert{
+    visibility: hidden;
+}
+.delete{
+    margin-top: -250px;
+    visibility: hidden;
+}
+nav{
+    margin-top: 60px;
+}
