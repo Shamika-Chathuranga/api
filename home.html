@@ -1,28 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <meta charset="UTF-8">
     <link rel="stylesheet" href="main.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <title>API DATA</title>
 </head>
-<body>
+<body onload="allData()">
 <div id="container">
     <br><br>
     
     <center><h1>All User Data</h1></center><br><br>
-    <button id="showdata" class="btn btn-primary bg-danger">Load User Data</button>&nbsp;&nbsp;&nbsp;<button id="insertData" class="btn btn-primary bg-success" onclick="unHide()">Insert User Data</button>&nbsp;&nbsp;&nbsp;<button id="deleteData" onclick="deleteUnhide()" class="btn btn-primary bg-warning">Delete User Data</button><br><br>
-<div id="allData">
-    <div class="row" id="allList">
-        <div id="cards-container">
-            <!-- cards will be put here by pagination.js -->
-          </div>
-          <div id="pagination-container">
-            <!-- the pagination controls will be put here by pagination.js -->
-          </div>
-       
-    </div>
+
+<div id="allList">
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Title</th>
+        <th scope="col">Body</th>
+        <th scope="col">Actions</th>
+      </tr>
+    </thead>
+    <tbody id="all">
+
+
+
+   <td><span class="material-symbols-outlined">
+  delete
+  </span></td>
+    </tbody>
+  </table>
 </div>
 
     <div id="insert" class="insert">

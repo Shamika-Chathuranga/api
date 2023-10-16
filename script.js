@@ -17,23 +17,27 @@ function allData(){
   xmlhttp.onload = function(){
     if(this.readyState == 4 && this.status == 200){
       Data = JSON.parse(this.responseText);
-      alert("Users Data Loaded Successfully.  Click 'OK' button to View Data.")
       //console.log(Data);
     }
     dataStore = "";
     for (single in Data){
-      dataStore += ` <div id="loadData" class="col-3">
-      <div class="card text-white bg-success mb-3">
-          <div class="card-body">
-              <p><strong> ID: </strong> ${Data[single].id}</p>
-              <span><strong>Title: </strong>${Data[single].title}</span><br><br>
-              <span><strong>Body: </strong>${Data[single].body}</span>
-          </div>
-      </div>
-  </div>
+      dataStore += ` 
+      
+        <tr>
+          <th scope="row">${Data[single].id}</th>
+          <td>${Data[single].title}</td>
+          <td>${Data[single].body}</td>
+          <td><button type=button class="del"><span class="material-symbols-outlined">
+          delete
+          </span></button><button class="update"><span class="material-symbols-outlined">
+          edit
+          </span></button></td>
+        </tr>
+        <tr>
+          </tr>
 `
     }
-allList.innerHTML= dataStore;
+all.innerHTML= dataStore;
 /*var $cardsContainer = $('#cards-container');
 $('#pagination-container').pagination({
   dataSource: dataStore,
@@ -86,25 +90,23 @@ function insertData(){
      
       if (xmlhttp.readyState == XMLHttpRequest.DONE) {
           InData = JSON.parse(this.responseText);
-          alert("Users Data Inserted Successfully.  Click 'OK' button to View Inserted Data.")
           console.log(InData);
           IndataStore = "";
         
-          IndataStore += ` <div class="col-3">
-          <h2>This is New Inserted Data Element.</h2>
-          <div class="card text-white bg-success mb-3">
-              <div class="card-body">
-                  <p><strong> ID: </strong> ${InData.id}</p>
-                  <span><strong>Title: </strong>${InData.name}</span><br><br>
-                  <span><strong>Body: </strong>${InData.email}</span>
-              </div>
-          </div>
-      </div>
+          IndataStore += `<tr>
+          <th scope="row" class="row">${InData.id}</th>
+          <td class="row">${InData.name}</td>
+          <td class="row">${InData.email}</td>
+          <td>delete</td>
+        </tr>
+        <tr>
+          </tr>
     `
-    document.getElementById("allList").style.visibility ="visible";
-        allList.innerHTML= IndataStore;
+       document.getElementById("allList").style.visibility ="visible";
+       document.getElementById("all");
+         all.innerHTML= IndataStore;
 
-        document.getElementById("insert").style.visibility ="hidden";
+       document.getElementById("insert").style.visibility ="hidden";
 
       } 
        
