@@ -3,6 +3,13 @@ showdata.addEventListener("click",function(){
   allData();
 })
 
+function hi(clicked){
+
+  x=(clicked);
+  console.log(x);
+}
+
+
 
 
 
@@ -20,22 +27,31 @@ function allData(){
       //console.log(Data);
     }
     dataStore = "";
+    count=1;
     for (single in Data){
+    
+     
       dataStore += ` 
       
         <tr>
           <th scope="row">${Data[single].id}</th>
           <td>${Data[single].title}</td>
           <td>${Data[single].body}</td>
-          <td><button type=button class="del"><span class="material-symbols-outlined">
+          <td><button type=button value="${Data[single].id}" class="del" id="del${Data[single].id}" onclick="hi(this.value)"><span class="material-symbols-outlined">
           delete
-          </span></button><button class="update"><span class="material-symbols-outlined">
+          </span></button><button class="update" id="update${Data[single].id}" value="${Data[single].id}" onclick="hi(this.value)"><span class="material-symbols-outlined">
           edit
           </span></button></td>
         </tr>
         <tr>
           </tr>
-`
+
+
+          `
+
+
+          count+=1;
+
     }
 all.innerHTML= dataStore;
 /*var $cardsContainer = $('#cards-container');
@@ -47,8 +63,11 @@ $('#pagination-container').pagination({
   }
 })*/
   }
+
   xmlhttp.send();
 }
+ 
+
 function unHide(){
   allList.innerHTML=``;
   document.getElementById("delete").style.visibility = "hidden";
