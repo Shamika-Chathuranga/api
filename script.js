@@ -37,9 +37,9 @@ function allData(){
           <th scope="row">${Data[single].id}</th>
           <td>${Data[single].title}</td>
           <td>${Data[single].body}</td>
-          <td><button type=button value="${Data[single].id}" class="del" id="del${Data[single].id}" onclick="hi(this.value)"><span class="material-symbols-outlined">
+          <td><button type=button value="${Data[single].id}" class="del" id="del${Data[single].id}" onclick="deleteData(this.value)"><span class="material-symbols-outlined">
           delete
-          </span></button><button class="update" id="update${Data[single].id}" value="${Data[single].id}" onclick="hi(this.value)"><span class="material-symbols-outlined">
+          </span></button><button class="update" id="update${Data[single].id}" value="${Data[single].id}" onclick="unHide(this.value)"><span class="material-symbols-outlined">
           edit
           </span></button></td>
         </tr>
@@ -68,10 +68,11 @@ $('#pagination-container').pagination({
 }
  
 
-function unHide(){
+function unHide(clicked){
   allList.innerHTML=``;
   document.getElementById("delete").style.visibility = "hidden";
   document.getElementById("insert").style.visibility = "visible";
+  return clicked;
 }
 
 function deleteUnhide(){
@@ -84,26 +85,29 @@ function deleteUnhide(){
 }
 
 function insertData(){
-  
-  
-
+  allList.innerHTML=``;
+  document.getElementById("delete").style.visibility = "hidden";
+  document.getElementById("insert").style.visibility = "visible";
   var xmlhttp;
   if (window.XMLHttpRequest) {
       xmlhttp = new XMLHttpRequest();
   } else if (window.ActiveXObject) {
       xmlhttp = new ActiveXObject("Microsoft.XMLHTTP")
   }
+ let val = clicked;
   // Instantiating the request object
   //xmlhttp.setRequestHeader
   //https://jsonplaceholder.typicode.com/posts
-  xmlhttp.open("POST", "https://jsonplaceholder.typicode.com/posts", true);
+
+    xmlhttp.open("PUT", "https://jsonplaceholder.typicode.com/posts", true);
   //xmlhttp.setRequestHeader("accept", "application/json");
   xmlhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
   // Retrieving the form data
   var myForm = document.getElementById("myForm");
   var formData = new FormData(myForm);
   // Sending the request to the server
-  xmlhttp.send(JSON.stringify(Object.fromEntries(formData)));
+  msg = JSON.stringify(Object.fromEntries(formData));
+  xmlhttp.send(msg);
   // Defining event listener for readystatechange event
   xmlhttp.onreadystatechange = function () {
      
@@ -121,6 +125,8 @@ function insertData(){
         <tr>
           </tr>
     `
+   
+    console.log(val);
        document.getElementById("allList").style.visibility ="visible";
        document.getElementById("all");
          all.innerHTML= IndataStore;
@@ -128,13 +134,13 @@ function insertData(){
        document.getElementById("insert").style.visibility ="hidden";
 
       } 
-       
-  }
+    }  
+  
   //Fail the onsubmit to avoid page refresh.
   return false;
 }
 
-function deleteData(){
+function deleteData(clicked){
   document.getElementById('allList').style.visibility = "hidden";
   document.getElementById("insert").style.visibility = "hidden";
   var xmlhttp;
@@ -146,12 +152,11 @@ function deleteData(){
   // Instantiating the request object
   //xmlhttp.setRequestHeader
   //https://jsonplaceholder.typicode.com/posts
-  var x =  document.getElementById('id1').value;
+   x = (clicked) ;
   console.log(x);
   xmlhttp.open("DELETE", "https://jsonplaceholder.typicode.com/posts/"+x, true);
 
   //delData = JSON.parse(this.responseText);
-  alert("Users Data deleted Successfully.  Click 'OK' button to View deleted Data.")
   //console.log(delData);
   // Defining event listener for readystatechange event
        document.getElementById("allList").style.visibility ="visible";
